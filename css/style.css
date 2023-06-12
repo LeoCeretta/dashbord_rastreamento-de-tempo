@@ -27,13 +27,18 @@ body {
     margin-top: 3rem;
 }
 
+.pessoal {
+    display: grid;
+    position: relative;
+}
+
 .pessoal-frente {
     background-color: var(--blue);
     display: grid;
+    position: absolute;
     grid-template-columns: 40% auto;
     gap: 5px;
     border-radius: 25px;
-    position: relative;
     width: 100%;
 }
 
@@ -41,7 +46,7 @@ body {
     background-color: var(--dark-blue);
     height: 10vh;
     border-radius: 0px 0px 25px 25px;
-    position: absolute;    
+    position: relative;    
     width: 100%;
     margin-top: 13rem;
 }
@@ -325,6 +330,10 @@ body {
     font-size: 30px;
 }
 
+.inativo {
+    display: none;
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
@@ -335,46 +344,176 @@ body {
 @media screen and (min-width: 1124px) {
     main {
         display: grid;
-        gap:10px;
+        gap:5px;
         grid-template-areas: 
             'pessoal work play study'
             'pessoal exercise social selfcare';
+        grid-template-columns: 30% auto;
+    }
+
+    .pessoal-frente {
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        font-size: 15px;
+        position: absolute;
+    }
+
+    .pessoal-fundo {
+        display: grid;
+        position: relative;
+        margin-top: 350px;
+    }
+
+    .pessoal-info {
+        display: inline-block;
+        margin-block-start: 42px;
+        margin-bottom: 2rem;
+    }
+
+    .pessoal-info p{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .navegacao {
+        display: flex;
+        align-items: center;
     }
 
     .informacoes {
         display: grid;
-        gap: 20px;
+        gap: 5px;
         grid-template-areas:
             'work play study'
             'exercise social selfcare';
         justify-content: space-between;
     }
 
+    .container-pessoal {
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
     #pessoal {
         grid-area: pessoal;
     }
 
+    .work-frente {
+        background-color: var(--dark-blue);
+        height: 20vh;
+        margin-bottom: 1rem;
+        border-radius: 25px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 'h2 a';
+        padding: 2rem;
+        font-size: 20px;
+        align-items: start;
+    }
     #work {
         grid-area: work;
+        display: grid;
+        width: 260px;
     }
 
     #play {
         grid-area: play;
+        display: grid;
+        width: 260px;
+    }
+
+    .play-frente {
+        background-color: var(--dark-blue);
+        height: 20vh;
+        margin-bottom: 1rem;
+        border-radius: 25px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 'h2 a';
+        padding: 2rem;
+        font-size: 20px;
+        align-items: start;
     }
 
     #study {
         grid-area: study;
+        display: grid;
+        width: 260px;
+    }
+
+    .study-frente {
+        background-color: var(--dark-blue);
+        height: 20vh;
+        margin-bottom: 1rem;
+        border-radius: 25px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 'h2 a';
+        padding: 2rem;
+        font-size: 20px;
+        align-items: start;
     }
 
     #exercise {
         grid-area: exercise;
+        display: grid;
+        width: 260px;
+    }
+
+    .exercise-frente {
+        background-color: var(--dark-blue);
+        height: 20vh;
+        margin-bottom: 1rem;
+        border-radius: 25px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 'h2 a';
+        padding: 2rem;
+        font-size: 20px;
+        align-items: start;
     }
 
     #social {
         grid-area: social;
+        display: grid;
+        width: 260px;
+    }
+
+    .social-frente {
+        background-color: var(--dark-blue);
+        height: 20vh;
+        margin-bottom: 1rem;
+        border-radius: 25px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 'h2 a';
+        padding: 2rem;
+        font-size: 20px;
+        align-items: start;
     }
 
     #selfcare {
         grid-area: selfcare;
+        display: grid;
+        width: 260px;
+    }
+
+    .selfcare-frente {
+        background-color: var(--dark-blue);
+        height: 20vh;
+        margin-bottom: 1rem;
+        border-radius: 25px;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 'h2 a';
+        padding: 2rem;
+        font-size: 20px;
+        align-items: start;
+    }
+
+    .inativo {
+        display: none;
     }
 }
